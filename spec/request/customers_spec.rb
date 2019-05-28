@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe 'Customers API', type: :request do
   before { host! 'api.localhost:3000' }
-
+    
   let!(:customers) { create_list(:customer, 10) }
   let(:customer) { customers.sample }
   let(:customer_id) { customer.id }

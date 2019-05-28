@@ -4,7 +4,9 @@ Rails.application.routes.draw do
     scope module: 'api' do
       namespace :v1 do
         resources :customers do
-          resources :orders
+          resources :orders do
+            resources :line_items
+          end
         end
       end
     end
